@@ -1,47 +1,165 @@
-.container{
-    display: flex;
-    border: 8px solid black;
-    height: 90vh;
-    /* flex-direction: column row reverse */
-    justify-content: space-evenly; /*  -around -between */
-
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
-.box{
+
+/* Botón de cambio */
+button {
+    margin: 20px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Contenedor principal con propiedades de Flexbox */
+.container {
+    display: flex; /* Activamos Flexbox */
+    flex-direction: row; /* Dirección por defecto (filas) */
+    justify-content: space-evenly; /* Distribución uniforme de los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    align-content: center; /* Centra las líneas del contenedor */
+    flex-wrap: wrap; /* Permite envolver los elementos si no caben */
+    border: 8px solid black;
+    height: 90vh; /* 90% del alto de la pantalla */
+    column-gap: 1em; /* Espacio entre las columnas */
+    row-gap: 1em; /* Espacio entre las filas */
+}
+
+/* Estilos generales para las cajas */
+.box {
     width: 100px;
     height: 100px;
     font-size: 5em;
     text-align: center;
     border-radius: 15px;
+    margin: 10px;
 }
-#box1{
+
+/* Estilos específicos para cada caja */
+#box1 {
     background-color: rgb(241, 99, 99);
 }
-#box2{
+#box2 {
     background-color: rgb(252, 252, 116);
 }
-#box3{
+#box3 {
     background-color: rgb(114, 243, 114);
 }
-#box4{
+#box4 {
     background-color: rgb(113, 113, 255);
 }
 
+/* Estilos para diferentes disposiciones de Flexbox */
+.container.layout1 {
+    flex-direction: row; /* Dirección en fila */
+    justify-content: space-evenly; /* Distribución uniforme */
+    align-items: center; /* Centrado en el eje transversal */
+}
 
-/*    
+.container.layout2 {
+    flex-direction: column; /* Dirección en columna */
+    justify-content: center; /* Centrado en el eje principal */
+    align-items: flex-start; /* Alineación al inicio en el eje transversal */
+}
 
-flex-direction: row;   row-reverse colummn column-revrse
-justify-content: flex-start flex-end  center   space-between space-around space-evenly
-aling-items: flex-start  flex-end  center baseline
-flex-wrap: wrap   nowrap   wrap-reverse
-alilng-content: flex-start   flex-end    center space-enely   space-between
-column-gap: 1em
-row-fap: 1em
+.container.layout3 {
+    flex-direction: row-reverse; /* Dirección en fila reversa */
+    justify-content: space-around; /* Espacio alrededor de los elementos */
+    align-items: flex-end; /* Alineación al final en el eje transversal */
+}
 
-Para los elementos:
-Alings-self: start center end
-order: 1 -1 
+.container.layout4 {
+    flex-direction: column-reverse; /* Dirección en columna reversa */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: stretch; /* Estiramiento de los elementos en el eje transversal */
+}
 
+/* Flexbox con más propiedades */
+.container.layout5 {
+    flex-direction: row;
+    justify-content: flex-start; /* Alineación al principio del eje principal */
+    align-items: baseline; /* Alineación en la línea de base */
+    flex-wrap: wrap-reverse; /* Los elementos se envuelven en dirección contraria */
+}
 
+.container.layout6 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* Alineación al final en el eje transversal */
+    flex-wrap: nowrap; /* Los elementos no se envuelven */
+}
 
+/* Estilos para el alineamiento de los elementos */
+#box1 {
+    align-self: flex-start; /* Se alinea al inicio del eje transversal */
+    order: 1; /* Orden 1 */
+}
 
+#box2 {
+    align-self: center; /* Se alinea al centro del eje transversal */
+    order: -1; /* Orden -1 (aparece primero) */
+}
+
+#box3 {
+    align-self: flex-end; /* Se alinea al final del eje transversal */
+    order: 2; /* Orden 2 */
+}
+
+#box4 {
+    align-self: baseline; /* Se alinea a la línea base del eje transversal */
+    order: 3; /* Orden 3 */
+}
+
+/* 
+Propiedades de Flexbox
+flex-direction: Define la dirección de los elementos dentro del contenedor.
+row: Elementos en fila (por defecto).
+row-reverse: Elementos en fila, pero en orden inverso.
+column: Elementos en columna.
+column-reverse: Elementos en columna, pero en orden inverso.
+
+justify-content: Alinea los elementos a lo largo del eje principal (horizontal por defecto).
+flex-start: Al inicio del contenedor.
+flex-end: Al final del contenedor.
+center: En el centro del contenedor.
+space-between: Espaciado igual entre los elementos.
+space-around: Espaciado igual alrededor de los elementos.
+space-evenly: Espaciado igual entre y alrededor de los elementos.
+
+align-items: Alinea los elementos a lo largo del eje transversal (vertical por defecto).
+flex-start: Alineación al inicio del contenedor.
+flex-end: Alineación al final del contenedor.
+center: Alineación en el centro del contenedor.
+baseline: Alineación según la línea base de los elementos.
+
+flex-wrap: Controla si los elementos se deben envolver cuando no hay suficiente espacio.
+nowrap: Los elementos no se envuelven.
+wrap: Los elementos se envuelven a la siguiente línea.
+wrap-reverse: Los elementos se envuelven, pero en sentido contrario.
+
+align-content: Alinea las líneas de elementos cuando hay múltiples líneas (útil cuando los elementos se envuelven).
+flex-start: Alineación al inicio de las líneas.
+flex-end: Alineación al final de las líneas.
+center: Alineación en el centro de las líneas.
+space-between: Espaciado igual entre las líneas.
+space-evenly: Espaciado igual entre las líneas y los bordes.
+
+column-gap: Define el espacio entre las columnas (si hay más de una).
+Ejemplo: column-gap: 1em;
+
+row-gap: Define el espacio entre las filas (si hay más de una).
+Ejemplo: row-gap: 1em;
+
+Propiedades para los Elementos Dentro del Contenedor
+align-self: Permite sobrescribir el valor de align-items para un elemento específico.
+start: Alineación al inicio del eje transversal.
+center: Alineación en el centro del eje transversal.
+end: Alineación al final del eje transversal.
+
+order: Controla el orden en que los elementos aparecen en el contenedor.
+1: Coloca el elemento en el primer lugar.
+-1: Coloca el elemento en el último lugar (puedes usar valores negativos o positivos para cambiar el orden). 
 */
