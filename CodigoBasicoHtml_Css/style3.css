@@ -1,0 +1,47 @@
+#div1 {
+    border: 2px solid;
+    height: 75px;
+    overflow: auto;
+}
+
+#div2 {
+    background-color: lightblue;
+}
+#span1 {
+    background-color: lightcoral;
+}
+
+.box{
+    border: 3px solid black;
+    height: 80px;
+    width: 200px;
+    padding: 25px;
+    float: left;
+    text-align: center;
+}
+
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: relative;
+    top: 140px;
+    left: 200px;
+}
+#boxjunior{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+#box2{
+    width: 200px;
+    height: 200px;
+    background-color:purple;
+    position: fixed;
+    right: 0px;
+    top: 20px;
+}

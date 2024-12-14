@@ -1,0 +1,123 @@
+/* Global Styles */
+body {
+    background: linear-gradient(to right, rgb(255, 232, 198), #ffbf00);
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #444;
+    padding: 10px 0;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.nav-links a:hover {
+    background-color: #ffc107;
+}
+
+/* Main Content */
+section {
+    padding: 20px;
+}
+p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Specific Styles for Paragraphs */
+#p1 {
+    color: red;
+}
+.odd {
+    font-style: italic;
+}
+.even {
+    font-size: 1.2em;
+}
+#p2 {
+    font-family: Verdana, Arial;
+}
+#p3 {
+    font-family: 'Edu AU VIC WA NT Pre', sans-serif;
+    color: black;
+}
+#p4 {
+    border: 2px dotted red;
+    padding: 10px;
+    border-radius: 15px;
+}
+#p5 {
+    border-bottom: 4px solid rgb(0, 0, 0);
+}
+
+/* Box Styles */
+section.boxes-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+#div1 {
+    font-size: 2em;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+#box1 {
+    width: 100px;
+    height: 50px;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Advanced Box Styles */
+.box {
+    border: 3px solid;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: white;
+}
+#div2 {
+    background: linear-gradient(to right, red, orange);
+    margin-left: 20px;
+}
+#div3 {
+    background: linear-gradient(to right, blue, purple);
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}

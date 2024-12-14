@@ -1,0 +1,36 @@
+.dropdown{
+    display: inline-block; /*? nose si seria mejor hacerlo un span en vez de un div */
+}
+
+.dropdown button{
+    background-color: lightblue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown:hover button{
+    background-color: brown;
+}
+
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.dropdown a:hover{
+    background-color: brown;
+}
+
+.dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: rgb(252, 192, 192);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px;
+}
+
+.dropdown:hover .content{
+    display: block;
+}

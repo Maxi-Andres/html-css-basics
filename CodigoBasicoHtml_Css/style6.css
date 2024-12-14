@@ -1,0 +1,19 @@
+.pagination{
+    text-align: center;
+}
+.pagination a{
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+    border-radius: 5px;     /* le puse el radio aca asi no se lo tengo que poner abajo */
+}
+
+.pagination a.active{
+    background-color: rgb(90, 249, 90);
+    font-weight: bold;
+    /* border-radius: 5px; */
+}
+.pagination a:hover:not(.active){
+    background-color: rgb(195, 195, 201);
+}

@@ -1,0 +1,12 @@
+body{
+    border: 3px solid;
+    display: flow-root; /* gracias a esto todo lo que este FLOAT tiene como root el body */ 
+}
+#img1{
+    float: left;
+    margin-right: 10px;
+}
+#img2{
+    float: right;
+    margin-right: 10px;
+}
